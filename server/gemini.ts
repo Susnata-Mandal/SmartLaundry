@@ -10,7 +10,7 @@ function getClient(): GoogleGenAI {
   if (AI_BASE_URL && AI_API_KEY) {
     return new GoogleGenAI({
       apiKey: AI_API_KEY,
-      httpOptions: { baseUrl: AI_BASE_URL },
+      httpOptions: { apiVersion: "", baseUrl: AI_BASE_URL },
     });
   }
   if (DIRECT_API_KEY) {
